@@ -1,4 +1,10 @@
-# 消息群发
+---
+title: "消息群发"
+draft: false
+weight: 6
+description: >
+  获取群发操作实例，群发消息类型
+---
 
 ## 获取群发操作实例
 
@@ -9,9 +15,10 @@ bd:=oa.GetBroadcast()
 ```
 
 ## 发送对象
-- 发送方法的第一个参数为`broadcast.User`对象，为nil则表示发送给所有人
-- `broadcast.User{TagID:1}` : 根据tagID发送
-- `broadcast.User{OpenID:[]string{"openid-1","openid-2"}}`` ：根据openid发送
+
+- 发送方法的第一个参数为`broadcast.User`对象，为 nil 则表示发送给所有人
+- `broadcast.User{TagID:1}` : 根据 tagID 发送
+- `broadcast.User{OpenID:[]string{"openid-1","openid-2"}}`` ：根据 openid 发送
 
 ## 群发消息类型
 
@@ -22,6 +29,7 @@ bd.SendText(user *User, content string)
 ```
 
 ### 发送图文
+
 ```go
 bd.SendNews(user *User, mediaID string,ignoreReprint bool)
 ```
@@ -43,4 +51,3 @@ bd.SendVoice(user *User, mediaID string)
 ```go
 bd.SendVideo(user *User, mediaID string,title,description string)
 ```
-

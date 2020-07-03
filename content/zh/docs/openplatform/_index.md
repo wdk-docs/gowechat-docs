@@ -1,8 +1,10 @@
-# 微信开放平台
-
-状态：beta
-
-[官方文档](https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Third_party_platform_appid.html)
+---
+title: "微信开放平台"
+draft: false
+weight: 3
+description: >
+  状态：beta [官方文档](https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Third_party_platform_appid.html)
+---
 
 ## 快速入门
 
@@ -32,15 +34,15 @@ server.SetMessageHandler(func(msg message.MixMessage) *message.Reply {
             log.Println(err)
             return nil
         }
-        //debug 
+        //debug
         fmt.Println(componentVerifyTicket)
         rw.Write([]byte("success"))
         return nil
     }
     //handle other message
     //
-    
-    
+
+
     return nil
 })
 

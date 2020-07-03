@@ -1,6 +1,10 @@
-# 小程序-云开发 SDK
-
-Tencent Cloud Base [文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-http-api/)
+---
+title: "小程序-云开发 SDK"
+draft: false
+weight: 4
+description: >
+  Tencent Cloud Base [文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-http-api/)
+---
 
 ## 使用说明
 
@@ -22,7 +26,9 @@ wcTcb := miniprogram.GetTcb()
 ```
 
 ## 举例
+
 ### 触发云函数
+
 ```golang
 res, err := wcTcb.InvokeCloudFunction("test-xxxx", "add", `{"a":1,"b":2}`)
 if err != nil {

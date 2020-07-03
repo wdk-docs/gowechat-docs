@@ -1,17 +1,26 @@
-# JS-SDK
+---
+title: "JS-SDK"
+draft: false
+weight: 8
+description: >
+  获取 js-sdk 操作实例，获取 js 配置
+---
 
-## 获取js-sdk操作实例
+## 获取 js-sdk 操作实例
+
 ```go
 oa := wc.GetOfficialAccount(cfg)
 j:=oa.GetJS()
 ```
 
-## 获取js配置
+## 获取 js 配置
+
 ```go
 GetConfig(uri string) (config *Config, err error)
 ```
 
 其中 `Config` 结果为：
+
 ```go
 // Config 返回给用户jssdk配置信息
 type Config struct {
@@ -24,7 +33,8 @@ type Config struct {
 
 ## 替换`js-ticket`取值方式
 
-默认js-ticket是存放在sdk设置的cache，如果需要自定义取值，可以实现`credential.JsTicketHandle`接口：
+默认 js-ticket 是存放在 sdk 设置的 cache，如果需要自定义取值，可以实现`credential.JsTicketHandle`接口：
+
 ```go
 //JsTicketHandle js ticket获取
 type JsTicketHandle interface {

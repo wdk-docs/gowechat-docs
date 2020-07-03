@@ -1,8 +1,13 @@
-# 公众号
-
-开发前必读：[微信公众官方文档](https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html)
+---
+title: "公众号"
+draft: false
+weight: 1
+description: >
+  开发前必读：[微信公众官方文档](https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html)
+---
 
 ## 获取微信公众号操作对象
+
 ```go
 wc := wechat.NewWechat()
 //设置全局cache，也可以单独为每个操作实例设置

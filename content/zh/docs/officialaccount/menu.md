@@ -1,16 +1,26 @@
-# 菜单管理
+---
+title: "菜单管理"
+draft: false
+weight: 9
+description: >
+  获取菜单操作实例等
+---
 
 ## 获取菜单操作实例
+
 ```go
 oa := wc.GetOfficialAccount(cfg)
 m:=oa.GetMenu()
 ```
 
 ## 获取当前菜单设置
+
 ```go
 GetMenu() (resMenu ResMenu, err error)
 ```
+
 其中`ResMenu`结果为：
+
 ```go
 //ResMenu 查询菜单的返回数据
 type ResMenu struct {
@@ -24,48 +34,60 @@ type ResMenu struct {
 }
 ```
 
-## 添加菜单（struct方式）
+## 添加菜单（struct 方式）
+
 ```go
 SetMenu(buttons []*Button) error
 ```
-## 添加菜单（JSON方式）
-直接传入json
+
+## 添加菜单（JSON 方式）
+
+直接传入 json
+
 ```go
 SetMenuByJSON(jsonInfo string) error
 ```
 
 ## 删除菜单
+
 ```go
 DeleteMenu() error
 ```
 
+## 添加个性化菜单（struct 方式）
 
-## 添加个性化菜单（struct方式）
 ```go
 AddConditional(buttons []*Button, matchRule *MatchRule) error
 ```
-## 添加个性化菜单（JSON方式）
-直接传入json
+
+## 添加个性化菜单（JSON 方式）
+
+直接传入 json
+
 ```go
 AddConditionalByJSON(jsonInfo string) error
 ```
 
 ## 测试个性化菜单匹配结果
+
 ```go
 MenuTryMatch(userID string) (buttons []Button, err error)
 ```
 
 ## 删除个性化菜单
+
 ```go
 DeleteConditional(menuID int64) error
 ```
 
 ## 获取自定义菜单配置接口
+
 ```go
 GetCurrentSelfMenuInfo() (resSelfMenuInfo ResSelfMenuInfo, err error)
 ```
 
 其中`ResSelfMenuInfo`结果为：
+
 ```go
 type ResSelfMenuInfo struct {
 	util.CommonError

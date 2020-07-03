@@ -1,8 +1,13 @@
-# 消息
->当普通微信用户向公众账号发消息时，微信服务器将POST消息的XML数据包到开发者填写的URL上。
+---
+title: "消息"
+draft: false
+weight: 4
+description: >
+  当普通微信用户向公众账号发消息时，微信服务器将POST消息的XML数据包到开发者填写的URL上。
+---
 
 在快速入门一节中就已经演示了如果收到消息以及对消息进行回复
-在SDK中通过`SetMessageHandler`方法对消息进行接收以及处理
+在 SDK 中通过`SetMessageHandler`方法对消息进行接收以及处理
 
 ```go
 server.SetMessageHandler(func(msg message.MixMessage) *message.Reply {
@@ -113,15 +118,14 @@ news := message.NewNews(articles)
 return &message.Reply{MsgType: message.MsgTypeNews, MsgData: news}
 ```
 
-
 ### 回复语音
 
 ```go
 voice := message.NewVoice(mediaID)
 return &message.Reply{MsgType: message.MsgTypeVoice, MsgData: voice}
 ```
-其中 `mediaID` 为媒体资源 ID ,可以通过素材管理(`Material`)中的接口进行上传
 
+其中 `mediaID` 为媒体资源 ID ,可以通过素材管理(`Material`)中的接口进行上传
 
 ### 回复视频
 
@@ -132,7 +136,6 @@ return &message.Reply{MsgType: message.MsgTypeVideo, MsgData: video}
 
 其中 `mediaID` 为媒体资源 ID ,可以通过素材管理(`Material`)中的接口进行上传
 
-
 ### 回复音乐
 
 ```go
@@ -142,13 +145,13 @@ return &message.Reply{MsgType: message.MsgTypeMusic, MsgData: music}
 
 `NewMusic`参数说明：
 
-|参数|是否必须|描述|
-|----|----|----|
-|Title|否|音乐标题|
-|Description|否|音乐描述|
-|MusicURL|否|音乐链接|
-|HQMusicUrl|否|高质量音乐链接，WIFI环境优先使用该链接播放音乐|
-|ThumbMediaId|否|缩略图的媒体id，通过素材管理中的接口上传多媒体文件，得到的id|
+| 参数         | 是否必须 | 描述                                                           |
+| ------------ | -------- | -------------------------------------------------------------- |
+| Title        | 否       | 音乐标题                                                       |
+| Description  | 否       | 音乐描述                                                       |
+| MusicURL     | 否       | 音乐链接                                                       |
+| HQMusicUrl   | 否       | 高质量音乐链接，WIFI 环境优先使用该链接播放音乐                |
+| ThumbMediaId | 否       | 缩略图的媒体 id，通过素材管理中的接口上传多媒体文件，得到的 id |
 
 其中不必须的参数可以填写空字符串`""`
 

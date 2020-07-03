@@ -1,4 +1,10 @@
-# 素材管理
+---
+title: "素材管理"
+draft: false
+weight: 7
+description: >
+  获取素材操作实例，新增永久图文素材等
+---
 
 ## 获取素材操作实例
 
@@ -20,21 +26,25 @@ AddMaterial(mediaType MediaType, filename string)
 ```
 
 ## 新增永久视频素材
+
 ```
 AddVideo(filename, title, introduction string)
 ```
 
 ## 删除永久素材
+
 ```go
 DeleteMaterial(mediaID string)
 ```
 
 ## 批量获取永久素材
+
 ```go
-BatchGetMaterial(permanentMaterialType PermanentMaterialType, offset, count int64) 
+BatchGetMaterial(permanentMaterialType PermanentMaterialType, offset, count int64)
 ```
 
 ## 获取永久图文素材
+
 ```go
-GetNews(id string) ([]*Article, error) 
+GetNews(id string) ([]*Article, error)
 ```

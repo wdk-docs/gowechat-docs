@@ -1,17 +1,26 @@
-# 消息解密
+---
+title: "消息解密"
+draft: false
+weight: 2
+description: >
+  获取操作实例，解密数据
+---
 
 ## 获取操作实例
+
 ```go
 mini := wc.GetMiniProgram(cfg)
 a:=mini.GetAuth()
 ```
 
 ## 解密数据
+
 ```go
 Decrypt(sessionKey, encryptedData, iv string) (*PlainData, error)
 ```
 
 其中结果为：
+
 ```go
 type PlainData struct {
 	OpenID    string `json:"openId"`
@@ -32,4 +41,5 @@ type PlainData struct {
 	} `json:"watermark"`
 }
 ```
+
 根据需要取用户信息还是手机号信息

@@ -1,5 +1,11 @@
-## 快速入门
-以下例子就演示了一个启动一个server，接收到用户发往公众号的消息然后做处理。
+---
+title: "快速入门"
+draft: false
+weight: 1
+description: >
+  以下例子就演示了一个启动一个server，接收到用户发往公众号的消息然后做处理。
+---
+
 > - 测试公众号可以使用[微信公众平台接口测试平台](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)
 > - 本地环境开发的话，可以使用 [ngrok](https://ngrok.com/)工具映射出来的公网地址，方便调试。
 
@@ -9,7 +15,9 @@
 go mod init github.com/silenceper/wechat-example
 go get -v github.com/silenceper/wechat/v2
 ```
+
 **包含一个文件`main.go`**
+
 > 代码中的配置参数请更改为自己的！
 
 ```go

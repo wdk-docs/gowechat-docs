@@ -1,6 +1,13 @@
-# 模板消息
+---
+title: "模板消息"
+draft: false
+weight: 1
+description: >
+  获取模板消息实例，发送模板消息
+---
 
 ## 获取模板消息实例
+
 ```go
 oa := wc.GetOfficialAccount(cfg)
 m:=oa.GetTemplate()
@@ -11,6 +18,7 @@ m:=oa.GetTemplate()
 ```go
 Send(msg *TemplateMessage) (msgID int64, err error)
 ```
+
 其中 `TemplateMessage`结构为：
 
 ```go

@@ -1,7 +1,13 @@
-# 小程序
-
+---
+title: "小程序"
+draft: false
+weight: 2
+description: >
+  小程序
+---
 
 ## 获取小程序操作对象
+
 ```go
 wc := wechat.NewWechat()
 memory := cache.NewMemory()
