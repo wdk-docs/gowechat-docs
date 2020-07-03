@@ -1,19 +1,20 @@
-# 微信SDK For Golang
+> 引用：https://silenceper.com/wechat
+
+# 微信 SDK For Golang
+
 [![start](https://img.shields.io/github/stars/silenceper/wechat)](https://github.com/silenceper/wechat/stargazers)
 [![godoc](https://img.shields.io/badge/godoc-reference-informational)](https://pkg.go.dev/github.com/silenceper/wechat/v2?tab=doc)
 [![license](https://img.shields.io/github/license/silenceper/wechat)](https://github.com/silenceper/wechat/blob/master/LICENSE)
 
-WeChat SDK 是一个Golang版本微信SDK，简单、易用。
+WeChat SDK 是一个 Golang 版本微信 SDK，简单、易用。
 
+SDK 源码：[https://github.com/silenceper/wechat](https://github.com/silenceper/wechat)
 
-
-SDK源码：[https://github.com/silenceper/wechat](https://github.com/silenceper/wechat)
-
->此文档使用sdk>=2.0版本，1.x系列版本文档在：[这里](https://github.com/silenceper/wechat/blob/v1.2.6/README.md)
+> 此文档使用 sdk>=2.0 版本，1.x 系列版本文档在：[这里](https://github.com/silenceper/wechat/blob/v1.2.6/README.md)
 
 ## 安装
 
-推荐使用go module进行依赖管理
+推荐使用 go module 进行依赖管理
 
 ```sh
 go get github.com/silenceper/wechat/v2
